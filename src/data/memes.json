@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Distracted Boyfriend",
+    "imageUrl": "https://i.imgflip.com/1ur9b0.jpg",
+    "likes": 42
+  },
+  {
+    "id": 2,
+    "title": "Drakeposting",
+    "imageUrl": "https://i.imgflip.com/30b1gx.jpg",
+    "likes": 55
+  },
+  {
+    "id": 3,
+    "title": "Two Buttons",
+    "imageUrl": "https://i.imgflip.com/1g8my4.jpg",
+    "likes": 37
+  },
+  {
+    "id": 4,
+    "title": "Change My Mind",
+    "imageUrl": "https://i.imgflip.com/24y43o.jpg",
+    "likes": 23
+  },
+  {
+    "id": 5,
+    "title": "Is This a Pigeon?",
+    "imageUrl": "https://i.imgflip.com/1o00in.jpg",
+    "likes": 18
+  },
+  {
+    "id": 6,
+    "title": "Mocking Spongebob",
+    "imageUrl": "https://i.imgflip.com/1otk96.jpg",
+    "likes": 49
+  },
+  {
+    "id": 7,
+    "title": "Expanding Brain",
+    "imageUrl": "https://i.imgflip.com/1jwhww.jpg",
+    "likes": 61
+  },
+  {
+    "id": 8,
+    "title": "Left Exit 12 Off Ramp",
+    "imageUrl": "https://i.imgflip.com/22bdq6.jpg",
+    "likes": 27
+  },
+  {
+    "id": 9,
+    "title": "Gru's Plan",
+    "imageUrl": "https://i.imgflip.com/26jxvz.jpg",
+    "likes": 35
+  },
+  {
+    "id": 10,
+    "title": "Batman Slapping Robin",
+    "imageUrl": "https://i.imgflip.com/9ehk.jpg",
+    "likes": 64
+  }
+]
