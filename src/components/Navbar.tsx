@@ -1,6 +1,12 @@
 "use client";
 
-import { Link } from "@heroui/react";
+import {
+  Navbar as HeroNavbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Link as HeroLink,
+} from "@heroui/react";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -11,25 +17,33 @@ const navLinks = [
 
 export default function Navbar() {
   const pathname = usePathname();
+
   return (
-    <nav className="flex items-center">
-      <Link as={NextLink} href="/" className="font-bold text-xl">
-        MemeLog
-      </Link>
-      <div className="flex space-x-6 w-full justify-center">
+    <HeroNavbar className="[&>header]:px-0">
+      <NavbarBrand>
+        <HeroLink as={NextLink} href="/" className="font-bold text-xl">
+          MemeLog
+        </HeroLink>
+      </NavbarBrand>
+
+      <NavbarContent
+        justify="center"
+        className="w-full flex justify-center space-x-8"
+      >
         {navLinks.map((link) => (
-          <Link
-            key={link.name}
-            as={NextLink}
-            href={link.href}
-            className={
-              pathname === link.href ? "underline underline-offset-4" : ""
-            }
-          >
-            {link.name}
-          </Link>
+          <NavbarItem key={link.name}>
+            <HeroLink
+              as={NextLink}
+              href={link.href}
+              className={
+                pathname === link.href ? "underline underline-offset-4" : ""
+              }
+            >
+              {link.name}
+            </HeroLink>
+          </NavbarItem>
         ))}
-      </div>
-    </nav>
+      </NavbarContent>
+    </HeroNavbar>
   );
 }
