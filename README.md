@@ -35,6 +35,8 @@ A minimal web app for viewing and editing iconic memes, built with **Next.js 15 
     MemeTable.tsx
     MemeCard.tsx
     EditModal.tsx
+    MemeList.tsx
+    Navbar.tsx
   /lib
     get-memes.ts
     update-meme.ts
