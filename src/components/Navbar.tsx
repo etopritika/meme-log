@@ -19,7 +19,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <HeroNavbar className="[&>header]:px-0">
+    <HeroNavbar>
       <NavbarBrand>
         <HeroLink as={NextLink} href="/" className="font-bold text-xl">
           MemeLog
