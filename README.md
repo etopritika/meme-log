@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Meme Log 😎
 
-## Getting Started
+A minimal web app for viewing and editing iconic memes, built with **Next.js 15 App Router**, **HeroUI**, and **Tailwind CSS**.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 📄 View memes in a table or card layout
+- 🔎 Edit memes using a modal form with validation
+- ✅ Local JSON-based API (FS-backed)
+- ⚡ Responsive UI using HeroUI components
+- 🧠 Form validation via Zod + React Hook Form
+- 🌗 Light/dark theme-ready
+- 🛠️ Deployed via Railway
+
+## 📦 Tech Stack
+
+- Next.js 15 App Router
+- React 19
+- HeroUI
+- Tailwind CSS
+- Zod
+- React Hook Form
+- Zustand (optional for state)
+- TypeScript
+
+## 📂 Project Structure
+
+```
+/src
+  /app
+    /list        // Card view page
+    /table       // Table view page
+    /api/memes   // JSON API (GET & PATCH)
+  /components
+    MemeTable.tsx
+    MemeCard.tsx
+    EditModal.tsx
+  /lib
+    get-memes.ts
+    update-meme.ts
+    types.ts
+  /data
+    memes.json   // Local JSON data
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧪 Local Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# 1. Install dependencies
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# 2. Run the dev server
+npm run dev
 
-## Learn More
+# 3. Open in browser
+http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🔧 Build for Production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Create an optimized production build
+npm run build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Start the server
+npm start
+```
 
-## Deploy on Vercel
+## 🌐 Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create a `.env.local` file in the root:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+```
+
+When deploying (e.g., to Railway), set `NEXT_PUBLIC_BASE_URL` to your production URL.
+
+## 📤 Deployment
+
+You can deploy this app to platforms like **Railway**, **Vercel**, or **Render**.
