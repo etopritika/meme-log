@@ -1,17 +1,24 @@
+"use server";
 import { Meme } from "@/lib/types";
 
 export async function getMemes(): Promise<Meme[]> {
-  const res = await fetch(
-    typeof window === "undefined"
-      ? `${
-          process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000"
-        }/api/memes`
-      : "/api/memes"
-  );
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch memes");
+  try {
+    const res = await fetch(`${baseUrl}/api/memes`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch memes: ${res.statusText}`);
+    }
+
+    const data: Meme[] = await res.json();
+    return data;
+  } catch {
+    throw new Error("An error occurred while fetching memes.");
   }
-
-  return res.json();
 }
