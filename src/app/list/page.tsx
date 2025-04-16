@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import MemeList from "@/components/MemeList";
 import { getMemes } from "@/lib/get-memes";
 
