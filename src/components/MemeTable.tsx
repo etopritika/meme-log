@@ -10,7 +10,7 @@ import {
   Link as HeroLink,
 } from "@heroui/react";
 import NextLink from "next/link";
-import EditModal from "./Modal/EditModal";
+import EditModal from "./EditModal";
 import { Meme } from "@/lib/types";
 import { useState } from "react";
 
